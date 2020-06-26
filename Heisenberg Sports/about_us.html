@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Heisenberg Sports</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Css Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Logo -->
+    <link rel="icon" href="images/logo.jpg" type="image/gif" sizes="16x16">
+</head>
+<body>
+    <!-- Navbar Start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="#" style="color:lightblue; font-family:Pristina; font-size:35px">
+                <img src="images/Nav-logo.jpg" width="150" height="90" alt=""> <b>Heisenberg Sports</b>
+            </a>
+        </nav>
+        <!--<a class="navbar-brand" href="#">Navbar</a>-->
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-auto" style="font-size: 18px">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="color: aliceblue;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Link</a>
+                </li>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: aliceblue;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="cricket.html">Cricket</a>
+                        <a class="dropdown-item" href="football.html">Football</a>
+                        <a class="dropdown-item" href="basketball.html">Basketball</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Clothing Section</a>
+                    </div>
+                </li>
+                <li class="nav-item active" style="color: aliceblue;">
+                    <a class="nav-link" href="about_us.html" style="color: aliceblue;">About Us</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#" style="color: aliceblue;">Disabled</a>
+                </li>-->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Navbar Ends -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 map_part">
+                <div id="googleMap" style="width:100%;height:400px; margin-top:20px; margin-bottom:140px;"></div>
+                <script>
+
+                    function myMap() {
+
+                            uluru = { lat: 18.575324, lng: 73.766008 };                       
+                            console.log(uluru);
+                            var map = new google.maps.Map(document.getElementById('googleMap'), {
+                                zoom: 15,
+                                center: uluru
+                                // mapTypeId: 'satellite'
+                            });
+                            var marker = new google.maps.Marker({
+                                position: uluru,
+                                map: map
+                            });
+
+                        }
+                </script>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="text-block">
+                    <div class="text">
+                        <h4>Heisenberg Sports, India</h4>
+                        <p style="color:deepskyblue">Address:-<br /> XYZ road, New city east side, India</p>
+                    </div>
+                </div>
+                <div class="text-block-2">
+                    <form action="storedata.php" onsubmit="alert('We got your data, We will contact you soon!!')">
+                        <div class="row" style="margin-top:5px;">
+                            <div class="col-sm-4">
+                                <label style="margin-left:10px">First Name:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" id="name" name="fname"/><br />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label style="margin-left:10px">Last Name:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" id="lname" name="lname" /><br />
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:2px">
+                            <div class="col-sm-4">
+                                <label style="margin-left:10px">Address:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <textarea id="address" name="add" style="height:100px; width:182px;"></textarea><br />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label style="margin-left:10px">Contact:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <input type="text" id="number" name="number" /><br />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <input type="submit" value="Submit" class="btn btn-outline-success" style="margin-left:177px; margin-bottom:5px; margin-top:3px" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer starts here -->
+    <footer class="footer mainfooter">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h3>Heisenberg Sports &copy; | Making better player</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 text-center">
+                <div class="fb">
+                    <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+    <!-- JS, Popper.js, and jQuery , Bootstrap-->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjaaA0jflcxE293oRFQtLE6yLXy5PWiPk&callback=myMap"></script>
+</body>
+</html>
+
+

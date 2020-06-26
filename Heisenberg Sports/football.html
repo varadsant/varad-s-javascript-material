@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Heisenberg Sports</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Css Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- Logo -->
+    <link rel="icon" href="images/logo.jpg" type="image/gif" sizes="16x16">
+</head>
+<body>
+    <!-- Navbar Start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-light bg-dark">
+            <a class="navbar-brand" href="index.html" style="color:lightblue; font-family:Pristina; font-size:35px">
+                <img src="images/Nav-logo.jpg" width="150" height="90" alt=""> <b>Heisenberg Sports</b>
+            </a>
+        </nav>
+        <!--<a class="navbar-brand" href="#">Navbar</a>-->
+        <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>-->
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ml-auto" style="font-size: 18px">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html" style="color: aliceblue;">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white">Link</a>
+                </li>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: aliceblue;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="cricket.html">Cricket</a>
+                        <a class="dropdown-item" href="football.html">Football</a>
+                        <a class="dropdown-item" href="basketball.html">Basketball</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Clothing Section</a>
+                    </div>
+                </li>
+                <li class="nav-item active" style="color: aliceblue;">
+                    <a class="nav-link" href="about_us.html" style="color: aliceblue;">About Us</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="#" style="color: aliceblue;">Disabled</a>
+                </li>-->
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Navbar Ends -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <table>
+                    <tr>
+                        <th style="width:200px; height: 50px">Product Name</th>
+                        <th style="width:200px; height: 50px">Image</th>
+                        <th style="width:200px; height: 50px">Quantity</th>
+                        <th style="width:200px; height: 50px">Price</th>
+                        <th style="width:100px; height: 50px">Add to Cart</th>
+                    </tr>
+                    <tr>
+                        <td>1. Football</td>
+                        <td><img src="images/football_1.jpg" width="150" height="90" alt=""></td>
+                        <td id="quan"><input type="number" id="quantity" placeholder="Press tab button" /></td>
+                        <td id="bat" style="color:aquamarine">Cost Per Item: 30<br /><input type="text" id="return_count" /></td>
+                        <td><a href="#" onclick="alert('Item Added Succesfully!');">Click to Add</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>2. Football Shoes</td>
+                        <td><img src="images/football_2.jpg" width="150" height="90" alt=""></td>
+                        <td id="quan"><input type="number" id="quantity1"  placeholder="Press tab button"/></td>
+                        <td id="ball" style="color:aquamarine">Cost Per Item: 20<br /><input type="text" id="return_count1" /></td>
+                        <td><a href="#" onclick="alert('Item Added Succesfully!');">Click to Add</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>3. Kit Bag<br /> <b>Includes: Stawkings, Shoes Pair, Shin Guard, Jersey</b></td>
+                        <td><img src="images/football_3.jpg" width="150" height="90" alt=""></td>
+                        <td id="quan"><input type="number" id="quantity2" placeholder="Press tab button" /></td>
+                        <td id="kit" style="color:aquamarine">Cost Per Item: 100<br /><input type="text" id="return_count2" /></td>
+                        <td><a href="#" onclick="alert('Item Added Succesfully!');">Click to Add</a></td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.getElementById("bat").addEventListener("keyup", myFunction);
+        document.getElementById("ball").addEventListener("keyup", myFunction1);
+        document.getElementById("kit").addEventListener("keyup", myFunction2);
+
+        function myFunction() {
+            var qua = document.getElementById("quantity").value;
+            console.log(qua);
+            var final = qua * 30;
+            document.getElementById("return_count").value = final;
+        }
+
+
+        function myFunction1() {
+            var qua = document.getElementById("quantity1").value;
+            console.log(qua);
+            var final = qua * 20;
+            document.getElementById("return_count1").value = final;
+        }
+
+        function myFunction2() {
+            var qua = document.getElementById("quantity2").value;
+            console.log(qua);
+            var final = qua * 100;
+            document.getElementById("return_count2").value = final;
+        }
+
+        //$('#quantity').on('keyup', function (e) {
+        //   if (e.which == 9) {
+        //        alert("111");
+        //    }
+        //});
+    </script>
+
+    <!-- Footer starts here -->
+    <footer class="footer mainfooter">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h3>Heisenberg Sports &copy; | Making better player</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4 text-center">
+                <div class="fb">
+                    <a href=""><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+                </div>
+                <div class="fb">
+                    <a href=""><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+    <!-- JS, Popper.js, and jQuery , Bootstrap-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjaaA0jflcxE293oRFQtLE6yLXy5PWiPk&callback=myMap"></script>
+</body>
+</html>
+
+
